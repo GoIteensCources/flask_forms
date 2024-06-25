@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to ... {% endblock %}</h1>
+
+    <div class="container">
+        <form action="/dosearch/" method="GET">
+            <label>search as GET</label>
+            <input type="search" name="s" placeholder="Пошук по сайту">
+            <input type="submit" value="Пошук">
+        </form>
+    </div>
+
+    <div class="container">
+        <form action="/dosearch/" method="POST">
+            <label>search as POST</label>
+            <input type="search" name="s" placeholder="Пошук по сайту">
+            <input type="submit" value="Пошук">
+        </form>
+    </div>
+
+{% endblock %}
